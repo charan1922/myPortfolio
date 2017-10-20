@@ -24,6 +24,10 @@
                 portfolio_grid.shuffle('update');
             });
 
+            // For MenuLink Redirections
+            document.getElementById("Portfolio_redirect").onclick = function () {
+                window.open("https://www.freecodecamp.org/charan1922/", '_top');
+            };
 
             portfolio_filter.on("click", ".filter", function (e) {
                 portfolio_grid.shuffle('update');
