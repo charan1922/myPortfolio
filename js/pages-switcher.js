@@ -136,7 +136,8 @@ var PageTransitions = (function ($, options) {
 
         $(document)
             .on("click",".site-main-menu, #ajax-page-close-button", function (e) { // Hide Ajax Loaded Page on Navigation cleck and Close button
-                e.preventDefault();
+                //e.preventDefault(); - here's your mistake!
+                // if needed you could but that in if, something like if the a element that has been clicked (is active) hasClass for pt-trigger, then preventDefault, otherwise (since it's a URL link) you don't want to
                 hideContent();
                 location.hash = location.hash.split('/')[0];
             })
